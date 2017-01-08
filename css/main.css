@@ -1,0 +1,14 @@
+.jumbotron{
+	margin:0;background-color:#E05252;color:white
+}
+
+footer{
+	background-color:#eee;margin-top:30px;padding:25px 0 0 0;color:#999;
+}
+
+nav{
+	margin-bottom:0 !important;
+}
+.skill-desc{
+	color:#888;
+}
