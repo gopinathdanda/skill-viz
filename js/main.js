@@ -4,13 +4,6 @@
 		function convert_dash(str){
 			return str.toLowerCase().replace(/ /g, '-');
 		}
-	
-				$('.skillsPieChart').radarChart({
-				size: [380, 300],
-				step: 1,
-				fixedMaxValue:5,
-				showAxisLabels: true
-				});
 				
 				$("#add-skill").on('submit', function(e){
 					e.preventDefault();

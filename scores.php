@@ -83,8 +83,8 @@
 		    <!-- Collect the nav links, forms, and other content for toggling -->
 		    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 		      <ul class="nav navbar-nav">
-		        <li class="active"><a href="index.php">Create skill set form <span class="sr-only">(current)</span></a></li>
-		        <li><a href="scores.php">Enter scores</a></li>
+		        <li><a href="index.php">Create skill set form</a></li>
+		        <li class="active"><a href="scores.php">Enter scores <span class="sr-only">(current)</span></a></li>
 		      </ul>
 		     
 		    </div><!-- /.navbar-collapse -->
@@ -93,11 +93,11 @@
 		
 		<div class="jumbotron container-fluid">
 			<div class="container">
-				<h1 class="skillset">Emotional Capacity</h1>
+				<h1 class="skillset">Enter scores</h1>
 				<p>
 					<!-- Button trigger modal -->
 					<button type="button" class="btn btn-default" data-toggle="modal" data-target="#change-skillset-modal">
-					  Change skill set name
+					  Load skill set
 					</button>
 				</p>
 			</div>
@@ -105,50 +105,49 @@
 		
 		<div class="container">
 			<div class="row">
-				<div class="col-md-6">
-					<h3>Add skill</h3>
-					<p>Input the skill name, description and the maximum score of each skill, and click submit to add the skill to the set.</p>
-					<form id="add-skill" method="POST" action="">
-						<div class="form-group">
-							<label for="skill">Skill name</label>
-							<input type="text" class="form-control" name="skill" id="skill" placeholder="Skill" required/>
-						</div>
-						<div class="form-group">
-							<label for="skill-desc">Skill description</label>
-							<input type="text" class="form-control" name="skill-desc" id="skill-desc" placeholder="Description"/>
-						</div>
-						<div class="form-group">
-							<label for="skill-max-score">Maximum skill score</label>
-							<input type="number" step="any" class="form-control" name="skill-max-score" id="skill-max-score" placeholder="Max score" required/>
-						</div>
-						<button id="submit-skill" type="submit" name="submit" class="btn btn-primary">Add skill</button>
-					</form>
-				</div>
-				<div class="col-md-6">
-					<h3>Skill set</h3>
-					<p>Delete any skill as required. When done, you can either enter the scores or save the skill set for later use.</p>
-					<ul class="list-group panel" id="skillset-list">
-						<li class="list-group-item emotional-self-awareness" id="emotional-self-awareness">
-							<h4>Emotional Self Awareness</h4>
-							<div class="pull-left">
-								<p class="skill-desc">Description of this skill for better understanding.</p>
-								<p>Max score: 10</p>
-							</div>
-							<div class="pull-right">
-								<button class="btn btn-danger skill-del" data="emotional-self-awareness">Delete skill</button>
-							</div>
-							<div class="clearfix"></div>
-						</li>
-					</ul>
-					<form id="save-skill" method="POST" action="">
-						<div id="hidden-group">
-							<input type="hidden" name="skillset[name]" class="skillset" value="Emotional Capacity" />
-							<input type="hidden" name="skillset[num]" id="field-nos" value="1" />
-							<input type="hidden" class="emotional-self-awareness" name="skillset[emotional-self-awareness][name]" value="Emotional Self Awareness" />
-							<input type="hidden" class="emotional-self-awareness" name="skillset[emotional-self-awareness][desc]" value="Description of this skill for better understanding."/>
-							<input type="hidden" class="emotional-self-awareness" name="skillset[emotional-self-awareness][max]" value="10"/>
-						</div>
-						<button type="submit" id="save" class="btn btn-primary">Save skill set</button>
+				<div class="col-md-12">
+					<h3>Default skill set</h3>
+					<p>Load skill set and save data or generate report.</p>
+					<form>
+					  <div class="form-group">
+					    <label for="student-name" class="sr-only">Name of student</label>
+					    <input type="text" class="form-control" id="student-name" placeholder="Name of the student" required>
+					  </div>
+					  
+					  <h4>Section 1</h4>
+					  <div class="row">
+					  	<div class="form-group col-sm-2">
+					    	<label for="score-1" class="sr-only">Score 1</label>
+							<div class="input-group">
+						      <input type="text" class="form-control" id="score-1" placeholder="Score">
+						      <div class="input-group-addon">out of 10</div>
+						    </div>
+					 	 </div>
+						 <div class="col-sm-10">
+						 	<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ac consequat tellus. Proin eu nunc quam. Maecenas fringilla orci eu luctus faucibus. Duis quis dictum nisl.</p>
+					 	</div>
+					  </div>
+					  
+					  
+					  <h4>Section 2</h4>
+					  <div class="row">
+					  	<div class="form-group col-sm-2">
+					    	<label for="score-2" class="sr-only">Score 2</label>
+							<div class="input-group">
+						      <input type="text" class="form-control" id="score-2" placeholder="Score">
+						      <div class="input-group-addon">out of 20</div>
+						    </div>
+					 	 </div>
+						 <div class="col-sm-10">
+						 	<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ac consequat tellus. Proin eu nunc quam. Maecenas fringilla orci eu luctus faucibus. Duis quis dictum nisl.</p>
+					 	</div>
+					  </div>
+					  
+					  
+					  <div class="form-group">
+					      <button type="submit" id="save" class="btn btn-primary">Save report</button>
+						  <button type="submit" id="generate" class="btn btn-primary">Generate report</button>
+					  </div>
 					</form>
 				</div>
 			</div>
