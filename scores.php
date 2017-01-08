@@ -16,7 +16,7 @@
 		<link rel="shortcut icon" type="image/x-icon" href="/favicon.ico">
 		<!-- Bootstrap core CSS -->
 		<link href="css/bootstrap.min.css" rel="stylesheet">
-		<link href="css/main.css?v2" rel="stylesheet">
+		<link href="css/main.css?v3" rel="stylesheet">
 		<link href='http://fonts.googleapis.com/css?family=Raleway:800,100|Roboto' rel='stylesheet' type='text/css'>
 
 		<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
@@ -34,24 +34,27 @@
 	<body>
 		
 		<!-- Modal -->
-		<div class="modal fade" id="change-skillset-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+		<div class="modal fade" id="add-score-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
 		  <div class="modal-dialog" role="document">
 		    <div class="modal-content">
 		      <div class="modal-header">
 		        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-		        <h4 class="modal-title" id="myModalLabel">Change skill set name</h4>
+		        <h4 class="modal-title" id="myModalLabel">Load skill set</h4>
 		      </div>
 		      <div class="modal-body">
-		        <form id="change-skillset" method="POST" action="">
+		        <form class="form-horizontal" id="load-skillset" method="POST" action="">
 					<div class="form-group">
-						<label for="skillset-name">Skill set name</label>
-						<input type="text" class="form-control" name="skillset-name" id="skillset-name" placeholder="Skill set" required/>
+						<label for="skillsets" class="col-sm-2 control-label">Skill set</label>
+						<div class="col-sm-10">
+							<select class="form-control" id="skillsets">
+							</select>
+						</div>
 					</div>
 		        </form>
 		      </div>
 		      <div class="modal-footer">
 		        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-		        <button type="button" class="btn btn-primary" id="skillset-update">Update skill set name</button>
+		        <button type="button" class="btn btn-primary" id="load">Load</button>
 		      </div>
 		    </div>
 		  </div>
@@ -83,7 +86,7 @@
 		    <!-- Collect the nav links, forms, and other content for toggling -->
 		    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 		      <ul class="nav navbar-nav">
-		        <li><a href="index.php">Create skill set form</a></li>
+		        <li><a href="index.php">Create skill set</a></li>
 		        <li class="active"><a href="scores.php">Enter scores <span class="sr-only">(current)</span></a></li>
 		      </ul>
 		     
@@ -93,10 +96,10 @@
 		
 		<div class="jumbotron container-fluid">
 			<div class="container">
-				<h1 class="skillset">Enter scores</h1>
+				<h1 class="skillset">Score entry</h1>
 				<p>
 					<!-- Button trigger modal -->
-					<button type="button" class="btn btn-default" data-toggle="modal" data-target="#change-skillset-modal">
+					<button type="button" id="load" class="btn btn-default" data-toggle="modal" data-target="#add-score-modal">
 					  Load skill set
 					</button>
 				</p>
@@ -108,43 +111,13 @@
 				<div class="col-md-12">
 					<h3>Default skill set</h3>
 					<p>Load skill set and save data or generate report.</p>
-					<form>
+					<form id="score-form">
 					  <div class="form-group">
 					    <label for="student-name" class="sr-only">Name of student</label>
 					    <input type="text" class="form-control" id="student-name" placeholder="Name of the student" required>
 					  </div>
 					  
-					  <h4>Section 1</h4>
-					  <div class="row">
-					  	<div class="form-group col-sm-2">
-					    	<label for="score-1" class="sr-only">Score 1</label>
-							<div class="input-group">
-						      <input type="text" class="form-control" id="score-1" placeholder="Score">
-						      <div class="input-group-addon">out of 10</div>
-						    </div>
-					 	 </div>
-						 <div class="col-sm-10">
-						 	<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ac consequat tellus. Proin eu nunc quam. Maecenas fringilla orci eu luctus faucibus. Duis quis dictum nisl.</p>
-					 	</div>
-					  </div>
-					  
-					  
-					  <h4>Section 2</h4>
-					  <div class="row">
-					  	<div class="form-group col-sm-2">
-					    	<label for="score-2" class="sr-only">Score 2</label>
-							<div class="input-group">
-						      <input type="text" class="form-control" id="score-2" placeholder="Score">
-						      <div class="input-group-addon">out of 20</div>
-						    </div>
-					 	 </div>
-						 <div class="col-sm-10">
-						 	<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ac consequat tellus. Proin eu nunc quam. Maecenas fringilla orci eu luctus faucibus. Duis quis dictum nisl.</p>
-					 	</div>
-					  </div>
-					  
-					  
-					  <div class="form-group">
+					  <div class="form-group" id="score-form-buttons">
 					      <button type="submit" id="save" class="btn btn-primary">Save report</button>
 						  <button type="submit" id="generate" class="btn btn-primary">Generate report</button>
 					  </div>
@@ -168,7 +141,7 @@
 		<script src="js/bootstrap.min.js"></script>
 		<script src="js/jquery-radar-plus.js"></script>
 		<script src="js/jquery.serializeJSON.js?v2"></script>
-		<script src="js/main.js?v3"></script>
+		<script src="js/scores.js?v0"></script>
 		
 	</body>
   

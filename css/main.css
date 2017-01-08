@@ -12,3 +12,6 @@ nav{
 .skill-desc{
 	color:#888;
 }
+#score-form-buttons{
+	display:none;
+}

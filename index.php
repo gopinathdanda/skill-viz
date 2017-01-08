@@ -51,7 +51,7 @@
 		      </div>
 		      <div class="modal-footer">
 		        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-		        <button type="button" class="btn btn-primary" id="skillset-update">Update skill set name</button>
+		        <button type="button" class="btn btn-primary" id="skillset-update">Update</button>
 		      </div>
 		    </div>
 		  </div>
@@ -83,7 +83,7 @@
 		    <!-- Collect the nav links, forms, and other content for toggling -->
 		    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 		      <ul class="nav navbar-nav">
-		        <li class="active"><a href="index.php">Create skill set form <span class="sr-only">(current)</span></a></li>
+		        <li class="active"><a href="index.php">Create skill set <span class="sr-only">(current)</span></a></li>
 		        <li><a href="scores.php">Enter scores</a></li>
 		      </ul>
 		     
@@ -144,9 +144,10 @@
 						<div id="hidden-group">
 							<input type="hidden" name="skillset[name]" class="skillset" value="Emotional Capacity" />
 							<input type="hidden" name="skillset[num]" id="field-nos" value="1" />
-							<input type="hidden" class="emotional-self-awareness" name="skillset[emotional-self-awareness][name]" value="Emotional Self Awareness" />
-							<input type="hidden" class="emotional-self-awareness" name="skillset[emotional-self-awareness][desc]" value="Description of this skill for better understanding."/>
-							<input type="hidden" class="emotional-self-awareness" name="skillset[emotional-self-awareness][max]" value="10"/>
+							<input type="hidden" class="emotional-self-awareness" name="skillset[skill1][name]" value="Emotional Self Awareness" />
+							<input type="hidden" class="emotional-self-awareness" name="skillset[skill1][desc]" value="Description of this skill for better understanding."/>
+							<input type="hidden" class="emotional-self-awareness" name="skillset[skill1][max]" value="10"/>
+							<input type="hidden" class="emotional-self-awareness" name="skillset[skill1][id]" value="emotional-self-awareness"/>
 						</div>
 						<button type="submit" id="save" class="btn btn-primary">Save skill set</button>
 					</form>

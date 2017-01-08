@@ -1,1 +1,1 @@
-[{"name":"Emotional Capacity","num":"3","emotional-self-awareness":{"name":"Emotional Self Awareness","desc":"Description of this skill for better understanding.","max":"10"}},{"ok-go":{"name":"Ok Go","desc":"SOmething other","max":"23"},"ok-go-rein":{"name":"Ok Go rein","desc":"Something other than that","max":"40"}}]
+[{"name":"Emotional Capacity","num":"1","skill1":{"name":"Emotional Self Awareness","desc":"Description of this skill for better understanding.","max":"10","id":"emotional-self-awareness"}}]

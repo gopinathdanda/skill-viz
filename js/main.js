@@ -16,10 +16,11 @@
 					
 					if(skill_name != '' && skill_max != ''){
 						var el = '<li class="list-group-item '+skill_id+'" id="'+skill_id+'"><h4>'+skill_name+'</h4><div class="pull-left"><p class="skill-desc">'+skill_desc+'</p><p>Max score: '+skill_max+'</p></div><div class="pull-right"><button class="btn btn-danger skill-del" data="'+skill_id+'">Delete skill</button></div><div class="clearfix"></div></li>';
-						var inp_name = '<input type="hidden" class="'+skill_id+'" name="skill['+skill_id+'][name]" value="'+skill_name+'" />';
-						var inp_desc = '<input type="hidden" class="'+skill_id+'" name="skill['+skill_id+'][desc]" value="'+skill_desc+'" />';
-						var inp_max = '<input type="hidden" class="'+skill_id+'" name="skill['+skill_id+'][max]" value="'+skill_max+'" />';
-						var inp = inp_name+inp_desc+inp_max;
+						var inp_name = '<input type="hidden" class="'+skill_id+'" name="skillset[skill'+num+'][name]" value="'+skill_name+'" />';
+						var inp_desc = '<input type="hidden" class="'+skill_id+'" name="skillset[skill'+num+'][desc]" value="'+skill_desc+'" />';
+						var inp_max = '<input type="hidden" class="'+skill_id+'" name="skillset[skill'+num+'][max]" value="'+skill_max+'" />';
+						var inp_id = '<input type="hidden" class="'+skill_id+'" name="skillset[skill'+num+'][id]" value="'+skill_id+'" />';
+						var inp = inp_name+inp_desc+inp_max+inp_id;
 						$('#field-nos').val(num);
 						$('#skillset-list').append(el);
 						$('#hidden-group').append(inp);
@@ -52,7 +53,7 @@
 				    ({
 				        type: "POST",
 				        url: 'save.php',
-				        data: { data: JSON.stringify(arr), fname: convert_dash(skillset) },
+				        data: { data: JSON.stringify(arr), fname: convert_dash(skillset), paodnwpaks: 872934 },
 				        success: function (data) { $('#saved').modal('show'); console.log(data)},
 				        error: function(xhr, status, errorThrown) {console.log(errorThrown);}
 				    });
