@@ -49,14 +49,14 @@
 					var arr = $.map(data, function(el) { return el });
 					var skillset = $('.skillset:first').text();
 					//console.log(skillset);
-				$.ajax
-				    ({
-				        type: "POST",
-				        url: 'save.php',
-				        data: { data: JSON.stringify(arr), fname: convert_dash(skillset), paodnwpaks: 872934 },
-				        success: function (data) { $('#saved').modal('show'); console.log(data)},
-				        error: function(xhr, status, errorThrown) {console.log(errorThrown);}
-				    });
+					$.ajax
+					    ({
+					        type: "POST",
+					        url: 'save.php',
+					        data: { data: JSON.stringify(arr), fname: convert_dash(skillset), paodnwpaks: 872934 },
+					        success: function (data) { $('#saved').modal('show'); console.log(data)},
+					        error: function(xhr, status, errorThrown) {console.log(errorThrown);}
+					    });
 				})
 				
 	

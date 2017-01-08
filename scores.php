@@ -62,9 +62,9 @@
 		
 		<div class="modal fade" id="saved" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
 		  <div class="modal-dialog" role="document">
-		    <div class="modal-content"style="color:#5cb85c;text-align:center;font-weight:bold">
+		    <div class="modal-content saved-modal">
 		      <div class="modal-body">
-		        Skill set saved successfully!
+		        Scores saved successfully!
 		      </div>
 		    </div>
 		  </div>
@@ -96,7 +96,7 @@
 		
 		<div class="jumbotron container-fluid">
 			<div class="container">
-				<h1 class="skillset">Score entry</h1>
+				<h1>Score entry</h1>
 				<p>
 					<!-- Button trigger modal -->
 					<button type="button" id="load" class="btn btn-default" data-toggle="modal" data-target="#add-score-modal">
@@ -109,17 +109,16 @@
 		<div class="container">
 			<div class="row">
 				<div class="col-md-12">
-					<h3>Default skill set</h3>
+					<h3 class="skillset">Skill set</h3>
 					<p>Load skill set and save data or generate report.</p>
 					<form id="score-form">
 					  <div class="form-group">
-					    <label for="student-name" class="sr-only">Name of student</label>
-					    <input type="text" class="form-control" id="student-name" placeholder="Name of the student" required>
+					    <label for="student[name]" class="sr-only">Name of student</label>
+					    <input type="text" class="form-control" name="student[name]" id="student-name" placeholder="Name of the student" required>
 					  </div>
 					  
 					  <div class="form-group" id="score-form-buttons">
 					      <button type="submit" id="save" class="btn btn-primary">Save report</button>
-						  <button type="submit" id="generate" class="btn btn-primary">Generate report</button>
 					  </div>
 					</form>
 				</div>

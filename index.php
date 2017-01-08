@@ -59,7 +59,7 @@
 		
 		<div class="modal fade" id="saved" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
 		  <div class="modal-dialog" role="document">
-		    <div class="modal-content"style="color:#5cb85c;text-align:center;font-weight:bold">
+		    <div class="modal-content saved-modal">
 		      <div class="modal-body">
 		        Skill set saved successfully!
 		      </div>
@@ -107,7 +107,7 @@
 			<div class="row">
 				<div class="col-md-6">
 					<h3>Add skill</h3>
-					<p>Input the skill name, description and the maximum score of each skill, and click submit to add the skill to the set.</p>
+					<p>Input the skill name, description and the maximum score of a skill, and add the skill to the set.</p>
 					<form id="add-skill" method="POST" action="">
 						<div class="form-group">
 							<label for="skill">Skill name</label>
@@ -126,7 +126,7 @@
 				</div>
 				<div class="col-md-6">
 					<h3>Skill set</h3>
-					<p>Delete any skill as required. When done, you can either enter the scores or save the skill set for later use.</p>
+					<p>Delete any skill as required. When done, you can save the skill set. It will appear when you load a skill set in the score entry page.</p>
 					<ul class="list-group panel" id="skillset-list">
 						<li class="list-group-item emotional-self-awareness" id="emotional-self-awareness">
 							<h4>Emotional Self Awareness</h4>
