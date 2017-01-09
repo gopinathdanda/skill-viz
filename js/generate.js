@@ -70,7 +70,7 @@
 									el += '<h4 class="skill-item">'+skillName+'</h4>';
 									el += '<div class="progress skill-item">';
   								  	el += '<div class="progress-bar progress-bar-info progress-bar-striped" role="progressbar" aria-valuenow="'+percentage+'" aria-valuemin="0" aria-valuemax="100" style="min-width: 2em; width:'+percentage+'%">';
-    								el += percentage+'%';
+    								el += Math.ceil(percentage)+'%';
   								  	el += '</div>';
 									el += '</div>';
 									
@@ -85,7 +85,7 @@
 								$('.skillsPieChart').attr('data-values', data);
 								
 								$('.alert-info').hide();
-								$('skillPieChart > canvas').remove();
+								$('.skillsPieChart').find('canvas').remove();
 								$('.skill-item').remove();
 								
 								if(num > 2){

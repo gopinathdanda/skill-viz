@@ -66,6 +66,9 @@
 									el += '</div></div></div>';
 								}
 								$('.skill-item').remove();
+								
+								$('#score-form').removeClass('custom-hidden').show();
+								$('.alert-info').hide();
 								$('#score-form-buttons').show();
 								$('#score-form-buttons').before(el);
 								$('#add-score-modal').modal('hide');
