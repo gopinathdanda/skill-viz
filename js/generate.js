@@ -37,8 +37,7 @@
 			error: function(xhr, status, errorThrown) {console.log(errorThrown);}
 		});
 		
-	
-				
+			
 				
 				$('#load').on('click', function(e){
 					e.preventDefault();
@@ -56,7 +55,7 @@
 								$('.skillset').text(skillset);
 								var num = arr.num;
 								var el = '';
-								var data = '{';
+								var data = {};
 								for(var i = 1; i<=num; i++){
 									var sk = 'skill'+i;
 									var skillId = arr[sk].id;
@@ -66,7 +65,7 @@
 									var percentage = skillScore/skillMax*100;
 									var skillName = convert_camel(skillId);
 									
-									data += '"'+skillName+'": '+percentage/20+',';
+									data[skillName] = percentage/20;
 									el += '<h4 class="skill-item">'+skillName+'</h4>';
 									el += '<div class="progress skill-item">';
   								  	el += '<div class="progress-bar progress-bar-info progress-bar-striped" role="progressbar" aria-valuenow="'+percentage+'" aria-valuemin="0" aria-valuemax="100" style="min-width: 2em; width:'+percentage+'%">';
@@ -81,18 +80,20 @@
 									el += '<div class="desc">'+skillDesc+'</div>';
 									el += '</div>';
 								}
-								data = data.slice(0, -1)+'}';
 								$('.skillsPieChart').attr('data-values', data);
 								
 								$('.alert-info').hide();
-								$('.skillsPieChart').find('canvas').remove();
 								$('.skill-item').remove();
+								$('.skillsPieChart').hide();
 								
 								if(num > 2){
 									$('.radar-not-shown').hide();
-									$('.skillsPieChart').radarChart({size: [550, 550], step: 1, fixedMaxValue:5, showAxisLabels: true});
+									$('.skillsPieChart').show();
+									$('.skillsPieChart').find('canvas').remove();
+									$('.skillsPieChart').radarChart({size: [550, 550], step: 1, values:data, fixedMaxValue:5, showAxisLabels: true});
 								}else{
 									$('.radar-not-shown').show();
+									$('.skillsPieChart').hide();
 								}
 								$('#line-graph').append(el);
 								$('#load-student-modal').modal('hide');
