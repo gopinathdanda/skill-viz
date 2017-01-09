@@ -16,7 +16,7 @@
 		<link rel="shortcut icon" type="image/x-icon" href="/favicon.ico">
 		<!-- Bootstrap core CSS -->
 		<link href="css/bootstrap.min.css" rel="stylesheet">
-		<link href="css/main.css?v2" rel="stylesheet">
+		<link href="css/main.css?v5" rel="stylesheet">
 		<link href='http://fonts.googleapis.com/css?family=Raleway:800,100|Roboto' rel='stylesheet' type='text/css'>
 
 		<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
@@ -53,6 +53,26 @@
 				      <div class="modal-footer">
 				        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
 				        <button type="button" class="btn btn-primary" id="skillset-update">Update</button>
+				      </div>
+				    </div>
+				  </div>
+				</div>
+				
+				<div class="modal fade" id="clear-skillsets-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+				  <div class="modal-dialog" role="document">
+				    <div class="modal-content">
+				      <div class="modal-header">
+				        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+				        <h4 class="modal-title" id="myModalLabel">Delete skill sets</h4>
+				      </div>
+				      <div class="modal-body">
+				        <form id="change-skillset" method="POST" action="">
+							<div class="alert alert-danger" role="alert"><strong>Delete all skill sets?</strong> This will delete all skill sets created up till now and cannot be undone.</div>
+				        </form>
+				      </div>
+				      <div class="modal-footer">
+				        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+				        <button type="button" class="btn btn-primary" id="skillsets-delete">Delete</button>
 				      </div>
 				    </div>
 				  </div>
@@ -102,8 +122,11 @@
 						<h1 class="skillset">Emotional Capacity</h1>
 						<p>
 							<!-- Button trigger modal -->
-							<button type="button" class="btn btn-default" data-toggle="modal" data-target="#change-skillset-modal">
+							<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#change-skillset-modal">
 							  Change skill set name
+							</button>
+							<button type="button" class="btn btn-danger" data-toggle="modal" data-target="#clear-skillsets-modal">
+							  Clear all skill sets data
 							</button>
 						</p>
 					</div>
@@ -177,7 +200,8 @@
 		<script src="js/jquery.js"></script>
 		<script src="js/bootstrap.min.js"></script>
 		<script src="js/jquery.serializeJSON.js?v2"></script>
-		<script src="js/main.js?v2"></script>
+		<script src="js/main.js?v5"></script>
+		<script src="js/common.js?v2"></script>
 		
 	</body>
   

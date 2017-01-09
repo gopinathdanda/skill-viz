@@ -16,7 +16,7 @@
 		<link rel="shortcut icon" type="image/x-icon" href="/favicon.ico">
 		<!-- Bootstrap core CSS -->
 		<link href="css/bootstrap.min.css" rel="stylesheet">
-		<link href="css/main.css?v1" rel="stylesheet">
+		<link href="css/main.css?v0" rel="stylesheet">
 		<link href='http://fonts.googleapis.com/css?family=Raleway:800,100|Roboto' rel='stylesheet' type='text/css'>
 
 		<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
@@ -105,8 +105,11 @@
 						<h1 class="skillset">Score entry</h1>
 						<p>
 							<!-- Button trigger modal -->
-							<button type="button" id="load" class="btn btn-default" data-toggle="modal" data-target="#add-score-modal">
+							<button type="button" id="load" class="btn btn-primary" data-toggle="modal" data-target="#add-score-modal">
 							  Load skill set
+							</button>
+							<button type="button" class="btn btn-danger" data-toggle="modal" data-target="#clear-skillsets">
+							  Clear all student data
 							</button>
 						</p>
 					</div>
@@ -148,7 +151,8 @@
 		<script src="js/jquery.js"></script>
 		<script src="js/bootstrap.min.js"></script>
 		<script src="js/jquery.serializeJSON.js?v2"></script>
-		<script src="js/scores.js?v2"></script>
+		<script src="js/scores.js?v4"></script>
+		<script src="js/common.js?v2"></script>
 		
 	</body>
   
