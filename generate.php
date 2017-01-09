@@ -16,7 +16,7 @@
 		<link rel="shortcut icon" type="image/x-icon" href="/favicon.ico">
 		<!-- Bootstrap core CSS -->
 		<link href="css/bootstrap.min.css" rel="stylesheet">
-		<link href="css/main.css?v5" rel="stylesheet">
+		<link href="css/main.css?v6" rel="stylesheet">
 		<link href='http://fonts.googleapis.com/css?family=Raleway:800,100|Roboto' rel='stylesheet' type='text/css'>
 
 		<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->

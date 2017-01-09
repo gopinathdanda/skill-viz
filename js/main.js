@@ -68,10 +68,21 @@ $(document).ready(function() {
 		        type: "POST",
 		        url: 'data_analysis.php',
 		        data: { data: JSON.stringify(arr), fname: convert_dash(skillset), paodnwpaks: 872934, fnc: 'save', dir: 'data' },
-		        success: function (data) { $('#saved').modal('show'); console.log(data)},
+		        success: function (data) { $('#saved').modal('show'); console.log(data);},
 		        error: function(xhr, status, errorThrown) {console.log(errorThrown);}
 		    });
-	});		
+	});
+	
+	// Delete all skillsets
+	$('#skillsets-delete').click(function(){
+		$.ajax({
+			type: "POST",
+			url: 'data_analysis.php',
+			data: {paodnwpaks: 872934, fnc: 'delete', dir: 'data'},
+			success: function(data) { $('#clear-skillsets-modal').modal('hide'); $('#deleted').modal('show'); console.log(data); },
+			error: function(xhr, status, errorThrown) {console.log(errorThrown);}
+		})
+	});
 });
 
 

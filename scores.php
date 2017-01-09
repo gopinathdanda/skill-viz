@@ -16,7 +16,7 @@
 		<link rel="shortcut icon" type="image/x-icon" href="/favicon.ico">
 		<!-- Bootstrap core CSS -->
 		<link href="css/bootstrap.min.css" rel="stylesheet">
-		<link href="css/main.css?v0" rel="stylesheet">
+		<link href="css/main.css?v1" rel="stylesheet">
 		<link href='http://fonts.googleapis.com/css?family=Raleway:800,100|Roboto' rel='stylesheet' type='text/css'>
 
 		<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
@@ -60,6 +60,26 @@
 				    </div>
 				  </div>
 				</div>
+				
+				<div class="modal fade" id="clear-scores-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+				  <div class="modal-dialog" role="document">
+				    <div class="modal-content">
+				      <div class="modal-header">
+				        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+				        <h4 class="modal-title" id="myModalLabel">Delete student scores</h4>
+				      </div>
+				      <div class="modal-body">
+				        <form id="change-skillset" method="POST" action="">
+							<div class="alert alert-danger" role="alert"><strong>Delete all student scores?</strong> This will delete all student scores created up till now and cannot be undone.</div>
+				        </form>
+				      </div>
+				      <div class="modal-footer">
+				        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+				        <button type="button" class="btn btn-primary" id="scores-delete">Delete</button>
+				      </div>
+				    </div>
+				  </div>
+				</div>
 		
 				<div class="modal fade" id="saved" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
 				  <div class="modal-dialog" role="document">
@@ -70,6 +90,20 @@
 		  		      </div>
 				      <div class="modal-body">
 				        <div class="alert alert-success" role="alert">Score saved successfully!</div>
+				      </div>
+				    </div>
+				  </div>
+				</div>
+				
+				<div class="modal fade" id="deleted" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+				  <div class="modal-dialog" role="document">
+				    <div class="modal-content saved-modal">
+				      <div class="modal-header">
+				        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+				        <h4 class="modal-title" id="myModalLabel">Deleted!</h4>
+				      </div>
+				      <div class="modal-body">
+						<div class="alert alert-success" role="alert">Student scores deleted successfully!</div>
 				      </div>
 				    </div>
 				  </div>
@@ -108,7 +142,7 @@
 							<button type="button" id="load" class="btn btn-primary" data-toggle="modal" data-target="#add-score-modal">
 							  Load skill set
 							</button>
-							<button type="button" class="btn btn-danger" data-toggle="modal" data-target="#clear-skillsets">
+							<button type="button" class="btn btn-danger" data-toggle="modal" data-target="#clear-scores-modal">
 							  Clear all student data
 							</button>
 						</p>

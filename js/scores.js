@@ -90,6 +90,17 @@ $(document).ready(function() {
 		        error: function(xhr, status, errorThrown) {console.log(errorThrown);}
 		    });
 	});
+	
+	// Delete all skillsets
+	$('#scores-delete').click(function(){
+		$.ajax({
+			type: "POST",
+			url: 'data_analysis.php',
+			data: {paodnwpaks: 872934, fnc: 'delete', dir: 'scores'},
+			success: function(data) { $('#clear-scores-modal').modal('hide'); $('#deleted').modal('show'); console.log(data); },
+			error: function(xhr, status, errorThrown) {console.log(errorThrown);}
+		})
+	});
 			
 
 });

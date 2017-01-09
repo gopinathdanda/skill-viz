@@ -16,7 +16,7 @@
 		<link rel="shortcut icon" type="image/x-icon" href="/favicon.ico">
 		<!-- Bootstrap core CSS -->
 		<link href="css/bootstrap.min.css" rel="stylesheet">
-		<link href="css/main.css?v5" rel="stylesheet">
+		<link href="css/main.css?v6" rel="stylesheet">
 		<link href='http://fonts.googleapis.com/css?family=Raleway:800,100|Roboto' rel='stylesheet' type='text/css'>
 
 		<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
@@ -87,6 +87,20 @@
 				      </div>
 				      <div class="modal-body">
 						<div class="alert alert-success" role="alert">Skill set saved successfully!</div>
+				      </div>
+				    </div>
+				  </div>
+				</div>
+				
+				<div class="modal fade" id="deleted" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+				  <div class="modal-dialog" role="document">
+				    <div class="modal-content saved-modal">
+				      <div class="modal-header">
+				        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+				        <h4 class="modal-title" id="myModalLabel">Deleted!</h4>
+				      </div>
+				      <div class="modal-body">
+						<div class="alert alert-success" role="alert">Skill sets deleted successfully!</div>
 				      </div>
 				    </div>
 				  </div>
@@ -200,7 +214,7 @@
 		<script src="js/jquery.js"></script>
 		<script src="js/bootstrap.min.js"></script>
 		<script src="js/jquery.serializeJSON.js?v2"></script>
-		<script src="js/main.js?v5"></script>
+		<script src="js/main.js?v6"></script>
 		<script src="js/common.js?v2"></script>
 		
 	</body>
