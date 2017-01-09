@@ -7,6 +7,8 @@ if(isset($_POST['data']) && $_POST['paodnwpaks'] == 872934){
 	$stringData = $_POST["data"];
 	fwrite($fh, $stringData);
 	fclose($fh);
+}else{
+	header('location:index.php');
 }
 
 ?>

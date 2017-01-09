@@ -1,7 +1,7 @@
 <?php
 
 if(isset($_POST['paodnwpaks']) && $_POST['paodnwpaks'] == 872934){
-	$dir = 'data';
+	$dir = 'scores';
 	$files = scandir($dir, 1);
 	$arr = array();
 	foreach($files as $value){

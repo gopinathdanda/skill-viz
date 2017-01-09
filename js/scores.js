@@ -32,13 +32,6 @@
 			error: function(xhr, status, errorThrown) {console.log(errorThrown);}
 		});
 		
-	
-				$('.skillsPieChart').radarChart({
-				size: [380, 300],
-				step: 1,
-				fixedMaxValue:5,
-				showAxisLabels: true
-				});
 				
 				$('#load').on('click', function(e){
 					e.preventDefault();
@@ -52,8 +45,10 @@
 								var arr = $.parseJSON(data)[0];
 								var skillset = arr.name;
 								$('.skillset').text(skillset);
+								$('#skillset-value').text(convert_dash(skillset));
 								var num = arr.num;
-								var el = '';
+								var el = '<input type="hidden" name="student[num]" value="'+num+'">';
+								el += '<input type="hidden" name="student[skillset]" value="'+skillset+'">';
 								for(var i = 1; i<=num; i++){
 									var sk = 'skill'+i;
 									var skillId = arr[sk].id;
@@ -83,7 +78,7 @@
 					e.preventDefault();
 					var data = $(this).serializeJSON();
 					var arr = $.map(data, function(el) { return el });
-					var st_name = $('#student-name').val();
+					var st_name = $('#student-name').val()+'_'+$('#skillset-value').text();
 					$.ajax
 					    ({
 					        type: "POST",

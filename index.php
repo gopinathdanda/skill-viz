@@ -85,6 +85,7 @@
 		      <ul class="nav navbar-nav">
 		        <li class="active"><a href="index.php">Create skill set <span class="sr-only">(current)</span></a></li>
 		        <li><a href="scores.php">Enter scores</a></li>
+				<li><a href="generate.php">Generate report</a></li>
 		      </ul>
 		     
 		    </div><!-- /.navbar-collapse -->
@@ -168,7 +169,6 @@
 		<!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>-->
 		<script src="js/jquery.js"></script>
 		<script src="js/bootstrap.min.js"></script>
-		<script src="js/jquery-radar-plus.js"></script>
 		<script src="js/jquery.serializeJSON.js?v2"></script>
 		<script src="js/main.js?v3"></script>
 		

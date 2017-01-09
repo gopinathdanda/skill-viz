@@ -16,7 +16,7 @@
 		<link rel="shortcut icon" type="image/x-icon" href="/favicon.ico">
 		<!-- Bootstrap core CSS -->
 		<link href="css/bootstrap.min.css" rel="stylesheet">
-		<link href="css/main.css?v3" rel="stylesheet">
+		<link href="css/main.css?v2" rel="stylesheet">
 		<link href='http://fonts.googleapis.com/css?family=Raleway:800,100|Roboto' rel='stylesheet' type='text/css'>
 
 		<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
@@ -34,19 +34,19 @@
 	<body>
 		
 		<!-- Modal -->
-		<div class="modal fade" id="add-score-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+		<div class="modal fade" id="load-student-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
 		  <div class="modal-dialog" role="document">
 		    <div class="modal-content">
 		      <div class="modal-header">
 		        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-		        <h4 class="modal-title" id="myModalLabel">Load skill set</h4>
+		        <h4 class="modal-title" id="myModalLabel">Load student score</h4>
 		      </div>
 		      <div class="modal-body">
 		        <form class="form-horizontal" id="load-skillset" method="POST" action="">
 					<div class="form-group">
-						<label for="skillsets" class="col-sm-2 control-label">Skill set</label>
-						<div class="col-sm-10">
-							<select class="form-control" name="skillsets" id="skillsets">
+						<label for="student" class="col-sm-4 control-label">Student name</label>
+						<div class="col-sm-8">
+							<select class="form-control" name="student" id="student">
 							</select>
 						</div>
 					</div>
@@ -55,16 +55,6 @@
 		      <div class="modal-footer">
 		        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
 		        <button type="button" class="btn btn-primary" id="load">Load</button>
-		      </div>
-		    </div>
-		  </div>
-		</div>
-		
-		<div class="modal fade" id="saved" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-		  <div class="modal-dialog" role="document">
-		    <div class="modal-content saved-modal">
-		      <div class="modal-body">
-		        Scores saved successfully!
 		      </div>
 		    </div>
 		  </div>
@@ -87,8 +77,8 @@
 		    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 		      <ul class="nav navbar-nav">
 		        <li><a href="index.php">Create skill set</a></li>
-		        <li class="active"><a href="scores.php">Enter scores <span class="sr-only">(current)</span></a></li>
-				<li><a href="generate.php">Generate report</a></li>
+		        <li><a href="scores.php">Enter scores</a></li>
+				<li class="active"><a href="generate.php">Generate report <span class="sr-only">(current)</span></a></li>
 		      </ul>
 		     
 		    </div><!-- /.navbar-collapse -->
@@ -97,11 +87,12 @@
 		
 		<div class="jumbotron container-fluid">
 			<div class="container">
-				<h1>Score entry</h1>
+				<h1 class="student-name">Student</h1>
+				<h2 class="skillset">Skill set</h2>
 				<p>
 					<!-- Button trigger modal -->
-					<button type="button" id="load" class="btn btn-default" data-toggle="modal" data-target="#add-score-modal">
-					  Load skill set
+					<button type="button" id="load" class="btn btn-default" data-toggle="modal" data-target="#load-student-modal">
+					  Load student scores
 					</button>
 				</p>
 			</div>
@@ -109,20 +100,19 @@
 		
 		<div class="container">
 			<div class="row">
-				<div class="col-md-12">
-					<h3 class="skillset">Skill set</h3>
-					<p>Load skill set and save data or generate report.</p>
-					<form id="score-form">
-					  <div class="form-group">
-					    <label for="student[name]" class="sr-only">Name of student</label>
-					    <input type="text" class="form-control" name="student[name]" id="student-name" placeholder="Name of the student" required>
-					  </div>
-					  <div class="custom-hidden" id="skillset-value"></div>
-					  
-					  <div class="form-group" id="score-form-buttons">
-					      <button type="submit" id="save" class="btn btn-primary">Save report</button>
-					  </div>
-					</form>
+				<div class="col-md-6" id="line-graph">
+					<h3 class="raw-data">Line graph</h3>
+					<div class="alert alert-info" role="alert">Load scores to generate graphs</div>
+				</div>
+				<div class="col-md-6" id="radar-chart">
+					<h3>Radar chart</h3>
+					<div class="alert alert-info" role="alert">Load scores to generate graphs</div>
+					<div class="alert alert-warning radar-not-shown" role="alert">You need at least 3 skills to generate a radar chart.</div>
+					<div class="skillsPieChart" data-values='{"jQuery": 4.5,"CSS/CSS3": 3.0,"Html5":3.0,"Python":4.0,"Node.js":4.0}' data-width="300" data-height="300" data-red="0" data-green="128" data-blue="255">
+						<div class="chartCanvasWrap">
+							
+						</div>
+					</div>
 				</div>
 			</div>
 		</div>
@@ -140,8 +130,9 @@
 		<!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>-->
 		<script src="js/jquery.js"></script>
 		<script src="js/bootstrap.min.js"></script>
+		<script src="js/jquery-radar-plus.js"></script>
 		<script src="js/jquery.serializeJSON.js?v2"></script>
-		<script src="js/scores.js?v0"></script>
+		<script src="js/generate.js?v1"></script>
 		
 	</body>
   

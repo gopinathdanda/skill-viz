@@ -18,3 +18,9 @@ nav{
 .saved-modal{
 	text-align:center;
 }
+.custom-hidden{
+	display:none!important;
+}
+.radar-not-shown{
+	display:none;
+}
