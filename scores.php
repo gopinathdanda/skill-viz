@@ -148,7 +148,7 @@
 		<script src="js/jquery.js"></script>
 		<script src="js/bootstrap.min.js"></script>
 		<script src="js/jquery.serializeJSON.js?v2"></script>
-		<script src="js/scores.js?v1"></script>
+		<script src="js/scores.js?v2"></script>
 		
 	</body>
   

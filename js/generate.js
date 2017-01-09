@@ -48,7 +48,7 @@
 					        url: 'get_score.php',
 					        data: { fname: id, paodnwpaks: 872934 },
 					        success: function (data) { 
-								var arr = $.parseJSON(data)[0];
+								var arr = JSON.parse(data)[0];
 								var st_name = arr.name;
 								var skillset = arr.skillset;
 								$('.student-name').text(st_name);
@@ -56,12 +56,16 @@
 								var num = arr.num;
 								var el = '';
 								var data = {};
-								for(var i = 1; i<=num; i++){
-									var sk = 'skill'+i;
-									var skillId = arr[sk].id;
-									var skillScore = arr[sk].score;
-									var skillMax = arr[sk].max;
-									var skillDesc = arr[sk].desc;
+								var l = 0;
+								for(var k in arr){
+									l += 1;
+									if(l<=3){
+										continue;
+									}
+									var skillId = arr[k].id;
+									var skillScore = arr[k].score;
+									var skillMax = arr[k].max;
+									var skillDesc = arr[k].desc;
 									var percentage = skillScore/skillMax*100;
 									var skillName = convert_camel(skillId);
 									

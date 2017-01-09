@@ -1,6 +1,6 @@
 
 	$(document).ready(function() {
-		
+		var index = 1;
 		function convert_dash(str){
 			return str.toLowerCase().replace(/ /g, '-');
 		}
@@ -13,13 +13,14 @@
 					var skill_max = $('#skill-max-score').val();
 					var skill_id = convert_dash(skill_name)
 					var num = Number($('#field-nos').val())+1;
+					index += 1;
 					
 					if(skill_name != '' && skill_max != ''){
-						var el = '<li class="list-group-item '+skill_id+'" id="'+skill_id+'"><h4>'+skill_name+'</h4><div class="pull-left"><p class="skill-desc">'+skill_desc+'</p><p>Max score: '+skill_max+'</p></div><div class="pull-right"><button class="btn btn-danger skill-del" data="'+skill_id+'">Delete skill</button></div><div class="clearfix"></div></li>';
-						var inp_name = '<input type="hidden" class="'+skill_id+'" name="skillset[skill'+num+'][name]" value="'+skill_name+'" />';
-						var inp_desc = '<input type="hidden" class="'+skill_id+'" name="skillset[skill'+num+'][desc]" value="'+skill_desc+'" />';
-						var inp_max = '<input type="hidden" class="'+skill_id+'" name="skillset[skill'+num+'][max]" value="'+skill_max+'" />';
-						var inp_id = '<input type="hidden" class="'+skill_id+'" name="skillset[skill'+num+'][id]" value="'+skill_id+'" />';
+						var el = '<li class="list-group-item skill'+index+'" id="skill'+index+'"><h4>'+skill_name+'</h4><div class="pull-left"><p class="skill-desc">'+skill_desc+'</p><p>Max score: '+skill_max+'</p></div><div class="pull-right"><button class="btn btn-danger skill-del" data="skill'+index+'">Delete skill</button></div><div class="clearfix"></div></li>';
+						var inp_name = '<input type="hidden" class="skill'+index+'" name="skillset[skill'+index+'][name]" value="'+skill_name+'" />';
+						var inp_desc = '<input type="hidden" class="skill'+index+'" name="skillset[skill'+index+'][desc]" value="'+skill_desc+'" />';
+						var inp_max = '<input type="hidden" class="skill'+index+'" name="skillset[skill'+index+'][max]" value="'+skill_max+'" />';
+						var inp_id = '<input type="hidden" class="skill'+index+'" name="skillset[skill'+index+'][id]" value="'+skill_id+'" />';
 						var inp = inp_name+inp_desc+inp_max+inp_id;
 						$('#field-nos').val(num);
 						$('#skillset-list').append(el);

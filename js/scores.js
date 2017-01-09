@@ -42,27 +42,30 @@
 					        url: 'get_data.php',
 					        data: { fname: id, paodnwpaks: 872934 },
 					        success: function (data) { 
-								var arr = $.parseJSON(data)[0];
+								var arr = JSON.parse(data)[0];
 								var skillset = arr.name;
 								$('.skillset').text(skillset);
 								$('#skillset-value').text(convert_dash(skillset));
 								var num = arr.num;
 								var el = '<input type="hidden" name="student[num]" value="'+num+'">';
 								el += '<input type="hidden" name="student[skillset]" value="'+skillset+'">';
-								for(var i = 1; i<=num; i++){
-									var sk = 'skill'+i;
-									var skillId = arr[sk].id;
-									el += '<div class="skill-item"><h4>'+arr[sk].name+'</h4>';
+								var l = 0;
+								for(var k in arr){
+									l += 1;
+									if(l<=2){
+										continue;
+									}
+									el += '<div class="skill-item"><h4>'+arr[k].name+'</h4>';
 									el += '<div class="row"><div class="form-group col-sm-2">';
-									el += '<label for="student[skill'+i+']" class="sr-only">Score of '+arr[sk].name+'</label>';
+									el += '<label for="student['+k+']" class="sr-only">Score of '+arr[k].name+'</label>';
 									el += '<div class="input-group">';
-									el += '<input type="number" step="any" class="form-control" name="student[skill'+i+'][score]" placeholder="Score">';
-									el += '<input type="hidden" name="student[skill'+i+'][id]" value="'+skillId+'">';
-									el += '<input type="hidden" name="student[skill'+i+'][max]" value="'+arr[sk].max+'">';
-									el += '<input type="hidden" name="student[skill'+i+'][desc]" value="'+arr[sk].desc+'">';
-									el += '<div class="input-group-addon">out of '+arr[sk].max+'</div>';
+									el += '<input type="number" step="any" class="form-control" name="student['+k+'][score]" placeholder="Score">';
+									el += '<input type="hidden" name="student['+k+'][id]" value="'+arr[k].id+'">';
+									el += '<input type="hidden" name="student['+k+'][max]" value="'+arr[k].max+'">';
+									el += '<input type="hidden" name="student['+k+'][desc]" value="'+arr[k].desc+'">';
+									el += '<div class="input-group-addon">out of '+arr[k].max+'</div>';
 									el += '</div></div><div class="col-sm-10">';
-									el += '<p>'+arr[sk].desc+'</p>';
+									el += '<p>'+arr[k].desc+'</p>';
 									el += '</div></div></div>';
 								}
 								$('.skill-item').remove();
