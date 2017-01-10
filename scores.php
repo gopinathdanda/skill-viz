@@ -75,7 +75,7 @@
 				      </div>
 				      <div class="modal-footer">
 				        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-				        <button type="button" class="btn btn-primary" id="scores-delete">Delete</button>
+				        <button type="button" class="btn btn-danger" id="scores-delete">Delete</button>
 				      </div>
 				    </div>
 				  </div>
@@ -143,7 +143,7 @@
 							  Load skill set
 							</button>
 							<button type="button" class="btn btn-danger" data-toggle="modal" data-target="#clear-scores-modal">
-							  Clear all student data
+							  Delete all student data
 							</button>
 						</p>
 					</div>

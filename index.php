@@ -52,7 +52,7 @@
 				      </div>
 				      <div class="modal-footer">
 				        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-				        <button type="button" class="btn btn-primary" id="skillset-update">Update</button>
+				        <button type="button" class="btn btn-primary" id="skillset-update">Change</button>
 				      </div>
 				    </div>
 				  </div>
@@ -72,7 +72,7 @@
 				      </div>
 				      <div class="modal-footer">
 				        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-				        <button type="button" class="btn btn-primary" id="skillsets-delete">Delete</button>
+				        <button type="button" class="btn btn-danger" id="skillsets-delete">Delete</button>
 				      </div>
 				    </div>
 				  </div>
@@ -140,7 +140,7 @@
 							  Change skill set name
 							</button>
 							<button type="button" class="btn btn-danger" data-toggle="modal" data-target="#clear-skillsets-modal">
-							  Clear all skill sets data
+							  Delete all skill sets data
 							</button>
 						</p>
 					</div>
