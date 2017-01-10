@@ -45,8 +45,8 @@
 				      <div class="modal-body">
 				        <form class="form-horizontal" id="load-skillset" method="POST" action="">
 							<div class="form-group">
-								<label for="skillsets" class="col-sm-2 control-label">Skill set</label>
-								<div class="col-sm-10">
+								<label for="skillsets" class="col-md-2 control-label">Skill set</label>
+								<div class="col-md-10">
 									<select class="form-control" name="skillsets" id="skillsets">
 									</select>
 								</div>
@@ -153,7 +153,7 @@
 					<div class="row">
 						<div class="col-md-12">
 							<h3></h3>
-							<div class="alert alert-info" role="alert">Load skill set.</div>
+							<div class="alert alert-info" role="alert">No skill set loaded yet.</div>
 							<form id="score-form" class="custom-hidden">
 							  <div class="form-group">
 							    <label for="student[name]">Name of student</label>

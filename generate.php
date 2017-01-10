@@ -7,6 +7,7 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<meta name="description" content="">
 		<meta name="keywords" content="">
+		
 		<meta name="author" content="Gopinath Danda">
 
 		<title>
@@ -15,8 +16,8 @@
 
 		<link rel="shortcut icon" type="image/x-icon" href="/favicon.ico">
 		<!-- Bootstrap core CSS -->
-		<link href="css/bootstrap.min.css" rel="stylesheet">
-		<link href="css/main.css?v6" rel="stylesheet">
+		<link type="text/css" href="css/bootstrap-print.css" rel="stylesheet" media="all">
+		<link href="css/main.css?v7" rel="stylesheet" media="all" type="text/css" media="all">
 		<link href='http://fonts.googleapis.com/css?family=Raleway:800,100|Roboto' rel='stylesheet' type='text/css'>
 
 		<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
@@ -46,8 +47,8 @@
 				      <div class="modal-body">
 				        <form class="form-horizontal" id="load-skillset" method="POST" action="">
 							<div class="form-group">
-								<label for="student" class="col-sm-4 control-label">Student name</label>
-								<div class="col-sm-8">
+								<label for="student" class="col-md-4 control-label">Student name</label>
+								<div class="col-md-8">
 									<select class="form-control" name="student" id="student">
 									</select>
 								</div>
@@ -93,8 +94,11 @@
 						<h2 class="skillset">Skill set</h2>
 						<p>
 							<!-- Button trigger modal -->
-							<button type="button" id="load" class="btn btn-primary" data-toggle="modal" data-target="#load-student-modal">
+							<button type="button" id="load" class="btn btn-primary print-hidden" data-toggle="modal" data-target="#load-student-modal">
 							  Load student scores
+							</button>
+							<button type="button" id="load" class="btn btn-danger print-hidden" onclick="window.print()">
+							  Print report
 							</button>
 						</p>
 					</div>
@@ -123,8 +127,9 @@
 		
 		<footer>
 			<div class="container">
-				<p class="pull-left">Skill visualization</p>
-				<p class="pull-right">Created by gdanda</p>
+				<p class="pull-left print-hidden">Skill visualization</p>
+				<p class="print-show" style="text-align:center">Report created with skill-viz by gdanda</p>
+				<p class="pull-right print-hidden">Created by gdanda</p>
 				<p class="clearfix"></p>
 			</div>
 		</footer>
