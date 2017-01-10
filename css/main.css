@@ -36,6 +36,13 @@
 	.print-show{
 		display:block !important;
 	}
+	.jumbotron h1, .jumbotron h2{
+		text-align:center;
+	}
+	h4{
+		color:#444 !important;
+		-webkit-print-color-adjust: exact !important;
+	}
 }
 
 html, body {

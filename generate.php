@@ -17,7 +17,7 @@
 		<link rel="shortcut icon" type="image/x-icon" href="/favicon.ico">
 		<!-- Bootstrap core CSS -->
 		<link type="text/css" href="css/bootstrap-print.css" rel="stylesheet" media="all">
-		<link href="css/main.css?v7" rel="stylesheet" media="all" type="text/css" media="all">
+		<link href="css/main.css?v8" rel="stylesheet" media="all" type="text/css" media="all">
 		<link href='http://fonts.googleapis.com/css?family=Raleway:800,100|Roboto' rel='stylesheet' type='text/css'>
 
 		<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
@@ -97,7 +97,7 @@
 							<button type="button" id="load" class="btn btn-primary print-hidden" data-toggle="modal" data-target="#load-student-modal">
 							  Load student scores
 							</button>
-							<button type="button" id="load" class="btn btn-danger print-hidden" onclick="window.print()">
+							<button type="button" id="load" class="btn btn-primary print-hidden" onclick="window.print()">
 							  Print report
 							</button>
 						</p>
@@ -108,11 +108,11 @@
 					<div class="row">
 						<div class="col-md-6" id="line-graph">
 							<h3 class="raw-data">Line graph</h3>
-							<div class="alert alert-info" role="alert">Load scores to generate graphs</div>
+							<div class="alert alert-info" role="alert">Load scores to generate graphs.</div>
 						</div>
 						<div class="col-md-6" id="radar-chart">
 							<h3>Radar chart</h3>
-							<div class="alert alert-info" role="alert">Load scores to generate graphs</div>
+							<div class="alert alert-info" role="alert">Load scores to generate graphs.</div>
 							<div class="alert alert-warning radar-not-shown" role="alert">You need at least 3 skills to generate a radar chart.</div>
 							<div class="skillsPieChart" data-values='' data-width="300" data-height="300" data-red="0" data-green="128" data-blue="255">
 								<div class="chartCanvasWrap">
@@ -128,7 +128,7 @@
 		<footer>
 			<div class="container">
 				<p class="pull-left print-hidden">Skill visualization</p>
-				<p class="print-show" style="text-align:center">Report created with skill-viz by gdanda</p>
+				<p class="print-show" style="text-align:center; color:#ddd">Report created with skill-viz by gdanda</p>
 				<p class="pull-right print-hidden">Created by gdanda</p>
 				<p class="clearfix"></p>
 			</div>
