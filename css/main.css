@@ -85,3 +85,12 @@ nav{
 .radar-not-shown{
 	display:none;
 }
+.chartCanvasWrap{
+	text-align:center;
+}
+canvas{
+	max-width:100%;
+}
+.btn{
+	margin-bottom:5px;
+}

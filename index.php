@@ -40,7 +40,7 @@
 				    <div class="modal-content">
 				      <div class="modal-header">
 				        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-				        <h4 class="modal-title" id="myModalLabel">Change skill set name</h4>
+				        <h4 class="modal-title" id="myModalLabel">Rename skill set</h4>
 				      </div>
 				      <div class="modal-body">
 				        <form id="change-skillset" method="POST" action="">
@@ -52,7 +52,7 @@
 				      </div>
 				      <div class="modal-footer">
 				        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-				        <button type="button" class="btn btn-primary" id="skillset-update">Change</button>
+				        <button type="button" class="btn btn-primary" id="skillset-update">Rename</button>
 				      </div>
 				    </div>
 				  </div>
@@ -137,10 +137,10 @@
 						<p>
 							<!-- Button trigger modal -->
 							<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#change-skillset-modal">
-							  Change skill set name
+							  Rename skill set
 							</button>
 							<button type="button" class="btn btn-danger" data-toggle="modal" data-target="#clear-skillsets-modal">
-							  Delete all skill sets data
+							  Delete all skill sets
 							</button>
 						</p>
 					</div>
