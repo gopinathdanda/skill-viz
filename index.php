@@ -133,7 +133,7 @@
 		
 				<div class="jumbotron container-fluid">
 					<div class="container">
-						<h1 class="skillset">Emotional Capacity</h1>
+						<h1 class="skillset">Skill Set Name</h1>
 						<p>
 							<!-- Button trigger modal -->
 							<button type="button" class="btn btn-danger" data-toggle="modal" data-target="#clear-skillsets-modal">
@@ -165,13 +165,13 @@
 							</form>
 						</div>
 						<div class="col-md-6">
-							<h3 class="skillset">Emotional capacity</h3>
+							<h3 class="skillset">Skill Set Name</h3>
 							<div class="alert alert-info" role="alert">Delete skills as required. When done, you can save the skill set. It will appear when you load a skill set in the score entry page.</div>
 							<ul class="list-group panel" id="skillset-list">
 								<li class="list-group-item skill1" id="emotional-self-awareness">
-									<h4>Emotional Self Awareness</h4>
+									<h4>Default Skill</h4>
 									<div class="pull-left">
-										<p class="skill-desc">The skill of perceiving and understanding one's own emotions</p>
+										<p class="skill-desc">Description of the skill.</p>
 										<p>Max score: 100</p>
 									</div>
 									<div class="pull-right">
