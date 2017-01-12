@@ -136,9 +136,6 @@
 						<h1 class="skillset">Emotional Capacity</h1>
 						<p>
 							<!-- Button trigger modal -->
-							<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#change-skillset-modal">
-							  Rename skill set
-							</button>
 							<button type="button" class="btn btn-danger" data-toggle="modal" data-target="#clear-skillsets-modal">
 							  Delete all skill sets
 							</button>
@@ -192,6 +189,9 @@
 									<input type="hidden" class="skill1" name="skillset[skill1][max]" value="100"/>
 									<input type="hidden" class="skill1" name="skillset[skill1][id]" value="emotional-self-awareness"/>
 								</div>
+								<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#change-skillset-modal">
+								  Rename skill set
+								</button>
 								<button type="submit" id="save" class="btn btn-primary">Save skill set</button>
 							</form>
 						</div>
