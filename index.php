@@ -168,7 +168,7 @@
 							<h3 class="skillset">Skill Set Name</h3>
 							<div class="alert alert-info" role="alert">Delete skills as required. When done, you can save the skill set. It will appear when you load a skill set in the score entry page.</div>
 							<ul class="list-group panel" id="skillset-list">
-								<li class="list-group-item skill1" id="emotional-self-awareness">
+								<li class="list-group-item skill1" id="skill-set-name">
 									<h4>Default Skill</h4>
 									<div class="pull-left">
 										<p class="skill-desc">Description of the skill.</p>
@@ -182,12 +182,12 @@
 							</ul>
 							<form id="save-skill" method="POST" action="">
 								<div id="hidden-group">
-									<input type="hidden" name="skillset[name]" class="skillset" value="Emotional Capacity" />
+									<input type="hidden" name="skillset[name]" class="skillset" value="Skill Set Name" />
 									<input type="hidden" name="skillset[num]" id="field-nos" value="1" />
-									<input type="hidden" class="skill1" name="skillset[skill1][name]" value="Emotional Self Awareness" />
-									<input type="hidden" class="skill1" name="skillset[skill1][desc]" value="The skill of perceiving and understanding one's own emotions"/>
+									<input type="hidden" class="skill1" name="skillset[skill1][name]" value="Default Skill" />
+									<input type="hidden" class="skill1" name="skillset[skill1][desc]" value="Description of the skill."/>
 									<input type="hidden" class="skill1" name="skillset[skill1][max]" value="100"/>
-									<input type="hidden" class="skill1" name="skillset[skill1][id]" value="emotional-self-awareness"/>
+									<input type="hidden" class="skill1" name="skillset[skill1][id]" value="skill-set-name"/>
 								</div>
 								<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#change-skillset-modal">
 								  Rename skill set
